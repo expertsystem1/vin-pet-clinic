@@ -1,7 +1,8 @@
 package guru.springframework.vinpetclinic.pojo;
 
-public class PetType {
+public class PetType extends BaseEntity{
 	
+	private static final long serialVersionUID = 1L;
 	private String name;
 
 	public String getName() {

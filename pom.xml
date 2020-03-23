@@ -48,7 +48,7 @@
 		</plugins>
 	</build>
 	<scm>
-		<developerConnection>scm:git:https://github.com/expertsystem1/vin-pet-clinic.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:expertsystem1/vin-pet-clinic.git</developerConnection>
 		<tag>vin-pet-clinic-0.0.1</tag>
 	</scm>
 

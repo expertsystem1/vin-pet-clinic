@@ -35,10 +35,8 @@
 				<version>2.5.3</version>
 				<configuration>
 					<goals>install</goals>
-					<!-- 
 						<localCheckout>true</localCheckout>
 						<pushChanges>false</pushChanges> 
-					-->
 				</configuration>
 			</plugin>
 		</plugins>

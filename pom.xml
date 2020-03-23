@@ -36,7 +36,7 @@
 				<configuration>
 					<goals>install</goals>
 						<localCheckout>true</localCheckout>
-						<pushChanges>false</pushChanges> 
+						<pushChanges>false</pushChanges> 						 
 				</configuration>
 			</plugin>
 		</plugins>

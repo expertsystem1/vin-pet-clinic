@@ -4,8 +4,9 @@ import java.util.Set;
 
 import guru.springframework.vinpetclinic.pojo.Vet;
 import guru.springframework.vinpetclinic.services.CrudService;
+import guru.springframework.vinpetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long>{
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
 
 	@Override
 	public Vet save(Vet object) {

@@ -7,20 +7,19 @@ import guru.springframework.vinpetclinic.pojo.Owner;
 import guru.springframework.vinpetclinic.pojo.Vet;
 import guru.springframework.vinpetclinic.services.OwnerService;
 import guru.springframework.vinpetclinic.services.VetService;
-import guru.springframework.vinpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.vinpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner{
 
 	private final OwnerService ownerService;
 	private final VetService vetService;
-	
-	public DataLoader() {
-		this.ownerService = new OwnerServiceMap();
-		this.vetService = new VetServiceMap();
+		
+
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
-	
+
 	@Override
 	public void run(String... args) throws Exception {
 		

@@ -6,6 +6,13 @@
 	</head>
 	<body>
 		<h1 th:text="'Pet Clinic Owners'">Pet Clinic Owners</h1>
-		
+		<table>
+		<tr><td><b>ID</b></td><td><b>First Name</b></td><td><b>Last name</b></td></tr>
+		<tr th:each="owner:${owners}">
+		    <td th:text="${owner?.id}">ID</td>
+		    <td th:text="${owner?.firstName}">First Name</td>
+		    <td th:text="${owner?.lastName}">Last name</td>
+		</tr>
+		</table>
 	</body>
 </html>

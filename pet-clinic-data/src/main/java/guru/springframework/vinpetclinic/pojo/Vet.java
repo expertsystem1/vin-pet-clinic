@@ -29,8 +29,16 @@ public class Vet extends Person{
 	public Set<Specialty> getSpecialties() {
 		return specialties;
 	}
+	
 	public void setSpecialties(Set<Specialty> specialties) {
 		this.specialties = specialties;
+	}
+	
+	public void addSpecility(Specialty speciality) {
+		if (this.specialties == null) {
+			this.specialties = new HashSet<Specialty>();
+		}
+		this.specialties.add(speciality);
 	}
 	  
 }

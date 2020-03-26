@@ -48,5 +48,12 @@ public class Owner extends Person{
 	public void setPets(Set<Pet> pets) {
 		this.pets = pets;
 	}
+	
+	public void addPet(Pet pet) {
+		if(this.pets == null) {
+			this.pets = new HashSet<Pet>();
+		}
+		this.pets.add(pet);
+	}
    	
 }

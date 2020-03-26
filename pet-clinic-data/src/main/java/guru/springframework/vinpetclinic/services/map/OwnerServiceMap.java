@@ -2,6 +2,7 @@ package guru.springframework.vinpetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.vinpetclinic.pojo.Owner;
@@ -11,6 +12,7 @@ import guru.springframework.vinpetclinic.services.PetService;
 import guru.springframework.vinpetclinic.services.PetTypeService;
 
 @Service
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService{
 	
 	private final PetService petService;

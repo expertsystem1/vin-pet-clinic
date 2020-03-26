@@ -1,7 +1,6 @@
 package guru.springframework.vinpetclinic.services.jpa;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -30,11 +29,7 @@ public class OwnerSDJPA implements OwnerService{
 
 	@Override
 	public Owner findById(Long id) {
-		Optional<Owner> optionalOwner = this.ownerRepository.findById(id); 
-		if(optionalOwner.isPresent()) {
-			return optionalOwner.get();
-		}
-		return null;
+		return ownerRepository.findById(id).orElse(null);
 	}
 
 	@Override

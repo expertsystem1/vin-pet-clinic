@@ -1,7 +1,6 @@
 package guru.springframework.vinpetclinic.services.jpa;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -30,10 +29,7 @@ public class PetTypeSDJPA implements PetTypeService {
 
 	@Override
 	public PetType findById(Long id) {
-		Optional<PetType> typeOptional = typeRepository.findById(id);
-		if (typeOptional.isPresent()) 
-			return typeOptional.get();
-		return null;
+		return typeRepository.findById(id).orElse(null);
 	}
 
 	@Override

@@ -49,14 +49,17 @@ public class DataLoader implements CommandLineRunner{
 		petTypeService.save(parrot);
 		
 		Pet fido = new Pet();
+		fido.setName("Fido");
 		fido.setPetType(dog);
 		fido.setBirthDate(LocalDate.of(2014, Month.JANUARY, 1));	
 		
 		Pet tom = new Pet();
+		tom.setName("Tom");
 		tom.setPetType(cat);
 		fido.setBirthDate(LocalDate.of(2015, Month.FEBRUARY, 3));	
 		
 		Pet cocorito = new Pet();
+		cocorito.setName("Cocorito");
 		cocorito.setPetType(parrot);
 		fido.setBirthDate(LocalDate.of(2016, Month.JUNE, 26));	
 		
@@ -88,11 +91,9 @@ public class DataLoader implements CommandLineRunner{
 		tom.setOwner(owner2);
 		ownerService.save(owner2);
 		
-		petService.save(cocorito);
+		/*petService.save(cocorito);
 		petService.save(tom);
-		petService.save(fido);
-		
-		
+		petService.save(fido);*/
 		
 		Vet vet1 = new Vet();
 		vet1.setFirstName("Sam");

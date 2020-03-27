@@ -50,7 +50,7 @@ public class DataLoader implements CommandLineRunner{
 		PetType dog = new PetType();
 		dog.setName("Dog");
 		petTypeService.save(dog);
-
+	
 		PetType cat = new PetType();
 		cat.setName("Cat");
 		petTypeService.save(cat);
@@ -108,7 +108,7 @@ public class DataLoader implements CommandLineRunner{
 		owner1.setCity("Zurich");
 		owner1.setTelephone("+41 254 258 11");
 		owner1.setAddress("St. Jackob Strasse n.39 8004");
-
+		
 		Set<Pet> owner2Pets = new HashSet<Pet>();
 		owner2Pets.add(tom);
 		owner1.setPets(owner2Pets);

@@ -12,11 +12,11 @@ import guru.springframework.vinpetclinic.services.OwnerService;
 
 @Service
 @Profile("springdatajpa")
-public class OwnerSDJPA implements OwnerService{
+public class OwnerServiceJpa implements OwnerService{
 
 	private final OwnerRepository ownerRepository;
 
-	public OwnerSDJPA(OwnerRepository ownerRepository) {
+	public OwnerServiceJpa(OwnerRepository ownerRepository) {
 		this.ownerRepository = ownerRepository;
 	}
 

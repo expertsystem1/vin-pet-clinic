@@ -12,11 +12,11 @@ import guru.springframework.vinpetclinic.services.SpecialtyService;
 
 @Service
 @Profile("springdatajpa")
-public class SpecilityService implements SpecialtyService{
+public class SpecilityServiceJpa implements SpecialtyService{
 
 	private final SpecialityRepository specialityRepository;
 
-	public SpecilityService(SpecialityRepository specialityRepository) {
+	public SpecilityServiceJpa(SpecialityRepository specialityRepository) {
 		this.specialityRepository = specialityRepository;
 	}
 

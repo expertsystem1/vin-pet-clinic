@@ -12,11 +12,11 @@ import guru.springframework.vinpetclinic.services.VisitService;
 
 @Service
 @Profile("springdatajpa")
-public class VisitSDJPA implements VisitService{
+public class VisitServiceJpa implements VisitService{
 
 	private final VisitRepository visitRepository;
 
-	public VisitSDJPA(VisitRepository visitRepository) {
+	public VisitServiceJpa(VisitRepository visitRepository) {
 		this.visitRepository = visitRepository;
 	}
 

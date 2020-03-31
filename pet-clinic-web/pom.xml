@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>guru.springframework</groupId>
 		<artifactId>vin-pet-clinic</artifactId>
-		<version>0.0.4</version>
+		<version>0.0.5-SNAPSHOT</version>
 	</parent>
 	<artifactId>pet-clinic-web</artifactId>
 	<properties>
@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>guru.springframework</groupId>
 			<artifactId>pet-clinic-data</artifactId>
-			<version>0.0.4</version>
+			<version>0.0.5-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

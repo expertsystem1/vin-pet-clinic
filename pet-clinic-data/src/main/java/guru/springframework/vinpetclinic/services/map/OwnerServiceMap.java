@@ -1,5 +1,6 @@
 package guru.springframework.vinpetclinic.services.map;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -73,6 +74,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 				.filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
 				.findFirst()
 				.orElse(null);
+	}
+
+	@Override
+	public List<Owner> findAllByLastNameLike(String lastName) {
+		//Todo - impl
+		return null;
 	}
 
 

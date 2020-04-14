@@ -1,6 +1,9 @@
 package guru.springframework.vinpetclinic.controllers;
 
+import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
@@ -59,6 +62,15 @@ public class OwnerControllerTest {
 		mvc.perform(get("/owners/find"))
 		   .andExpect(status().isOk())
 		   .andExpect(view().name("notimplemented"));
+	}
+	
+	@Test
+	public void showOwner() throws Exception {
+		when(service.findById(anyLong())).thenReturn(Owner.builder().id(1L).build());
+        mvc.perform(get("/owners/123"))
+        .andExpect(status().isOk())
+        .andExpect(view().name("owners/ownerDetails"))
+        .andExpect(model().attribute("owner", hasProperty("id", is(1l))));
 	}
 
 }

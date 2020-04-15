@@ -22,7 +22,6 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name="pets")
 public class Pet extends BaseEntity{
@@ -45,13 +44,25 @@ public class Pet extends BaseEntity{
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
 	private Set<Visit> visits = new HashSet<Visit>();
-		
+	
+	
 	
 	public void addVisit(Visit visit) {
 		if(this.visits == null) {
 			this.visits = new HashSet<Visit>();
 		}
 		this.visits.add(visit);
+	}
+
+
+	@Builder
+	public Pet(Long id,String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
+		super(id);
+		this.name = name;
+		this.petType = petType;
+		this.owner = owner;
+		this.birthDate = birthDate;
+		this.visits = visits;
 	}
 	
 	
